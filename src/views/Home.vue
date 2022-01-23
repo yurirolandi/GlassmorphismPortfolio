@@ -5,8 +5,8 @@
         <p>Hello, I'm</p>
         <h1>Yuri Rolandi</h1>
         <h2>Frontend developer</h2>
-        <Btn text="More about me" />
-        <Btn text="portfolio" />
+        <Btn @click.stop="$router.push('/about')" text="More about me" />
+        <Btn @click.stop="$router.push('/portfolio')" text="portfolio" />
       </div>
       <div class="home-img">
         <div class="home-box">
