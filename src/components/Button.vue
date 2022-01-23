@@ -33,6 +33,7 @@ export default {
   transition: color 0.3s ease;
   opacity: initial;
   margin: 7px 10px;
+  max-width: 179.19px;
   &::before {
     content: "";
     position: absolute;
