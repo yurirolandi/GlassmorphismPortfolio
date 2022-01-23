@@ -32,6 +32,8 @@ export default {
     .row {
       display: flex;
       flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
     }
   }
 }

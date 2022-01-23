@@ -39,6 +39,7 @@ export default {
   justify-content: center;
 
   .home-text {
+    min-width: 369px;
     > p {
       font-size: 18px;
     }
@@ -54,6 +55,7 @@ export default {
     }
   }
   .home-img {
+    min-width: 371.5px;
     .home-box {
       max-width: 360px;
       background-color: $white-alpha-25;
@@ -61,7 +63,8 @@ export default {
       border: 8px solid $white-alpha-25;
       margin: auto;
       overflow: hidden;
-      height: 355px;
+      height: auto;
+      max-height: 355px;
       img {
         width: 100%;
         margin: auto;
