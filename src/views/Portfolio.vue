@@ -3,7 +3,7 @@
     <ContainerSection>
       <div class="container">
         <div class="row">
-          <h1 class="portfolio-title">Recent work</h1>
+          <h1 class="portfolio-title">{{ idioma.br.portfolio.title }}</h1>
         </div>
         <div class="row">
           <div
@@ -82,6 +82,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 import image1 from "../../guia/img/portfolio/1.jpg";
@@ -239,6 +240,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapState({
+      idioma: (state) => state,
+    }),
   },
 };
 </script>
