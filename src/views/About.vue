@@ -53,7 +53,7 @@
           </div>
         </transition>
         <Btn text="download cv" />
-        <Btn text="contact me" />
+        <Btn text="contact me" @click.stop="$router.push('/contact')" />
       </div>
     </ContainerSection>
   </div>
@@ -64,6 +64,7 @@ import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 import Skills from "@/components/Skills.vue";
 import TimeLine from "../components/TimeLine.vue";
+
 export default {
   name: "About",
   components: {
@@ -137,6 +138,8 @@ export default {
   .about-img {
     width: 40%;
     padding: 0 15px;
+    min-width: 415.19px;
+    margin-bottom: 30px;
     .about-box {
       background: $white-alpha-25;
       max-width: 380px;
@@ -151,6 +154,7 @@ export default {
   .about-text {
     width: 60%;
     padding: 0 15px;
+    min-width: 415.19px;
     padding-bottom: 50px;
     h3 {
       text-transform: capitalize;
