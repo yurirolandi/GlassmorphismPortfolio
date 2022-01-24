@@ -26,21 +26,9 @@
                 </div>
                 <div class="general-info">
                   <ul>
-                    <li>
-                      {{ portfolio.item_course_date.item }} -
-                      <span>{{ portfolio.item_course_date.date }}</span>
-                    </li>
-                    <li>
-                      {{ portfolio.item_course_tec.item }} -
-                      <span> {{ portfolio.item_course_tec.item }}</span>
-                    </li>
-                    <li>
-                      {{ portfolio.item_course_role.item }} -
-                      <span> {{ portfolio.item_course_role.item }}</span>
-                    </li>
-                    <li>
-                      {{ portfolio.item_course_view.item }} -
-                      <span> {{ portfolio.item_course_view.item }}</span>
+                    <li v-for="(curso, i) in portfolio.item_course" :key="i">
+                      {{ curso.item }} -
+                      <span>{{ curso.stack }}</span>
                     </li>
                   </ul>
                 </div>
@@ -51,11 +39,12 @@
       </div>
     </ContainerSection>
     <PopUp
-      v-model="show"
-      imgSrc=""
-      imgTitle=""
-      descriptionText=""
-      descriptionInfo=""
+      v-if="show"
+      :imgSrc="imgSrc"
+      :imgTitle="imgTitle"
+      :descriptionText="descriptionText"
+      :descriptionInfo="descriptionInfo"
+      @closePopUp="show = false"
     />
   </div>
 </template>
@@ -81,6 +70,10 @@ export default {
   data() {
     return {
       show: false,
+      imgSrc: "",
+      imgTitle: "",
+      descriptionText: "",
+      descriptionInfo: [],
       portfolioItems: [
         {
           url: image1,
@@ -88,22 +81,28 @@ export default {
           title: "education course website",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
           btnText: "View project",
-          item_course_date: {
-            item: "created",
-            date: "4 dec 2020",
-          },
-          item_course_tec: {
-            item: "technologies used",
-            stack: "Html, css",
-          },
-          item_course_role: {
-            item: "Role",
-            stack: "Frontend",
-          },
-          item_course_view: {
-            item: "View Online",
-            stack: "www.domain.com.br",
-          },
+          item_course: [
+            {
+              item: "created",
+              stack: "4 dec 2020",
+            },
+            {
+              item: "technologies used",
+              stack: "Html, css",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "View Online",
+              stack: "www.domain.com.br",
+            },
+          ],
         },
         {
           url: image2,
@@ -111,22 +110,28 @@ export default {
           title: "education course website",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
           btnText: "View project",
-          item_course_date: {
-            item: "created",
-            date: "4 dec 2020",
-          },
-          item_course_tec: {
-            item: "technologies used",
-            stack: "Html, css",
-          },
-          item_course_role: {
-            item: "Role",
-            stack: "Frontend",
-          },
-          item_course_view: {
-            item: "View Online",
-            stack: "www.domain.com.br",
-          },
+          item_course: [
+            {
+              item: "created",
+              stack: "4 dec 2020",
+            },
+            {
+              item: "technologies used",
+              stack: "Html, css",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "View Online",
+              stack: "www.domain.com.br",
+            },
+          ],
         },
         {
           url: image3,
@@ -134,22 +139,28 @@ export default {
           title: "education course website",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
           btnText: "View project",
-          item_course_date: {
-            item: "created",
-            date: "4 dec 2020",
-          },
-          item_course_tec: {
-            item: "technologies used",
-            stack: "Html, css",
-          },
-          item_course_role: {
-            item: "Role",
-            stack: "Frontend",
-          },
-          item_course_view: {
-            item: "View Online",
-            stack: "www.domain.com.br",
-          },
+          item_course: [
+            {
+              item: "created",
+              stack: "4 dec 2020",
+            },
+            {
+              item: "technologies used",
+              stack: "Html, css",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "View Online",
+              stack: "www.domain.com.br",
+            },
+          ],
         },
         {
           url: image4,
@@ -157,22 +168,28 @@ export default {
           title: "education course website",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
           btnText: "View project",
-          item_course_date: {
-            item: "created",
-            date: "4 dec 2020",
-          },
-          item_course_tec: {
-            item: "technologies used",
-            stack: "Html, css",
-          },
-          item_course_role: {
-            item: "Role",
-            stack: "Frontend",
-          },
-          item_course_view: {
-            item: "View Online",
-            stack: "www.domain.com.br",
-          },
+          item_course: [
+            {
+              item: "created",
+              stack: "4 dec 2020",
+            },
+            {
+              item: "technologies used",
+              stack: "Html, css",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "View Online",
+              stack: "www.domain.com.br",
+            },
+          ],
         },
         {
           url: image5,
@@ -180,22 +197,28 @@ export default {
           title: "education course website",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
           btnText: "View project",
-          item_course_date: {
-            item: "created",
-            date: "4 dec 2020",
-          },
-          item_course_tec: {
-            item: "technologies used",
-            stack: "Html, css",
-          },
-          item_course_role: {
-            item: "Role",
-            stack: "Frontend",
-          },
-          item_course_view: {
-            item: "View Online",
-            stack: "www.domain.com.br",
-          },
+          item_course: [
+            {
+              item: "created",
+              stack: "4 dec 2020",
+            },
+            {
+              item: "technologies used",
+              stack: "Html, css",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "View Online",
+              stack: "www.domain.com.br",
+            },
+          ],
         },
         {
           url: image6,
@@ -203,22 +226,28 @@ export default {
           title: "education course website",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
           btnText: "View project",
-          item_course_date: {
-            item: "created",
-            date: "4 dec 2020",
-          },
-          item_course_tec: {
-            item: "technologies used",
-            stack: "Html, css",
-          },
-          item_course_role: {
-            item: "Role",
-            stack: "Frontend",
-          },
-          item_course_view: {
-            item: "View Online",
-            stack: "www.domain.com.br",
-          },
+          item_course: [
+            {
+              item: "created",
+              stack: "4 dec 2020",
+            },
+            {
+              item: "technologies used",
+              stack: "Html, css",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "Role",
+              stack: "Frontend",
+            },
+            {
+              item: "View Online",
+              stack: "www.domain.com.br",
+            },
+          ],
         },
       ],
     };
@@ -230,7 +259,11 @@ export default {
   },
   methods: {
     viewProject(info) {
-      console.log(info);
+      this.imgSrc = info.url;
+      this.imgTitle = info.title;
+      this.descriptionText = info.text;
+      this.descriptionInfo = info.item_course;
+      this.show = true;
     },
   },
 };
@@ -244,6 +277,8 @@ export default {
       display: flex;
       width: 100%;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       .portfolio-title {
         width: 100%;
         text-align: center;
@@ -252,6 +287,7 @@ export default {
       .portfolio-item {
         width: calc((100% / 3) - 30px);
         margin: 0 15px 30px;
+        min-width: 315.98px;
         h3 {
           font-size: 20px;
           text-transform: capitalize;

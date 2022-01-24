@@ -3,7 +3,7 @@
     <div class="pp-inner">
       <div class="pp-content">
         <div class="pp-header">
-          <Btn class="close" text="X" />
+          <Btn class="close" text="X" @click.stop="$emit('closePopUp')" />
           <div class="pp-thumbnail">
             <img :src="imgSrc" alt="portfolio" />
             <h3>{{ imgTitle }}</h3>
@@ -18,7 +18,8 @@
           <div class="general-info">
             <ul>
               <li v-for="(info, i) in descriptionInfo" :key="i">
-                info.title - <span>info.subtitle</span>
+                {{ info.item }} -
+                <span>{{ info.stack }}</span>
               </li>
             </ul>
           </div>
@@ -29,8 +30,12 @@
 </template>
 
 <script>
+import Btn from "../components/Button.vue";
 export default {
   name: "PopUp",
+  components: {
+    Btn,
+  },
   props: {
     imgSrc: String,
     imgTitle: String,
@@ -49,12 +54,11 @@ export default {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: red;
+  background-color: transparent;
   z-index: 10;
   opacity: 1;
-  visibility: hidden;
   .pp-inner {
-    background: red;
+    background: $primary;
     min-height: 100vh;
     padding: 40px 15px;
     display: flex;
@@ -74,11 +78,22 @@ export default {
         position: relative;
         .close {
           position: absolute;
-          height: 40px;
-          width: 40px;
+          height: 50px;
+          width: 50px;
           padding: 0;
-          right: -40px;
-          top: -40px;
+          right: -52px;
+          top: -55px;
+          border: none;
+          cursor: pointer;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.25);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 23px;
+          z-index: 1;
         }
 
         .pp-thumbnail {
