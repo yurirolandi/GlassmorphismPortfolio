@@ -14,7 +14,10 @@
             <div class="portfolio-item__thumbnail">
               <img :src="portfolio.url" :alt="portfolio.alt" />
               <h3 class="portfolio-item__title">{{ portfolio.title }}</h3>
-              <Btn :text="portfolio.btnText" />
+              <Btn
+                :text="portfolio.btnText"
+                @click.stop="viewProject(portfolio)"
+              />
               <div class="portfolio-item__details">
                 <div class="description">
                   <p>
@@ -47,37 +50,13 @@
         </div>
       </div>
     </ContainerSection>
-    <div class="portfolio-popup">
-      <div class="pp-inner">
-        <div class="pp-content">
-          <div class="pp-header">
-            <Btn class="close" text="X" />
-            <div class="pp-thumbnail">
-              <img src="../../guia/img/portfolio/3.jpg" alt="portfolio" />
-              <h3>App landing page</h3>
-            </div>
-          </div>
-          <div class="pp-body">
-            <div class="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                incidunt veniam voluptate repellat tempora rerum maiores
-                veritatis, odit ipsum officiis provident voluptatibus hic natus
-                distinctio eos pariatur ducimus quod consequuntur!
-              </p>
-            </div>
-            <div class="general-info">
-              <ul>
-                <li>created - <span>4 dec 2020</span></li>
-                <li>technologies used - <span>Html, css</span></li>
-                <li>Role - <span>Frontend</span></li>
-                <li>View Online - <span>www.domain.com.br</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <PopUp
+      v-model="show"
+      imgSrc=""
+      imgTitle=""
+      descriptionText=""
+      descriptionInfo=""
+    />
   </div>
 </template>
 
@@ -85,6 +64,7 @@
 import { mapState } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
+import PopUp from "@/components/PopUp.vue";
 import image1 from "../../guia/img/portfolio/1.jpg";
 import image2 from "../../guia/img/portfolio/2.jpg";
 import image3 from "../../guia/img/portfolio/3.jpg";
@@ -96,9 +76,11 @@ export default {
   components: {
     ContainerSection,
     Btn,
+    PopUp,
   },
   data() {
     return {
+      show: false,
       portfolioItems: [
         {
           url: image1,
@@ -246,6 +228,11 @@ export default {
       idioma: (state) => state,
     }),
   },
+  methods: {
+    viewProject(info) {
+      console.log(info);
+    },
+  },
 };
 </script>
 
@@ -281,79 +268,6 @@ export default {
         }
         &__details {
           display: none;
-        }
-      }
-    }
-  }
-  .portfolio-popup {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: red;
-    z-index: 10;
-    opacity: 1;
-    visibility: hidden;
-    .pp-inner {
-      background: red;
-      min-height: 100vh;
-      padding: 40px 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .pp-content {
-        background: $white-alpha-25;
-        padding: 30px;
-        border-radius: 30px;
-        max-width: 900px;
-        width: 100%;
-        border: 1px solid $white-alpha-40;
-        backdrop-filter: $backdrop-filter-blur;
-
-        .pp-header {
-          position: relative;
-          .close {
-            position: absolute;
-            height: 40px;
-            width: 40px;
-            padding: 0;
-            right: -40px;
-            top: -40px;
-          }
-
-          .pp-thumbnail {
-            img {
-              border-radius: 10px;
-            }
-            h3 {
-              font-size: 25px;
-              text-transform: capitalize;
-              margin: 20px 0;
-            }
-          }
-        }
-        .pp-body {
-          .description {
-            margin-bottom: 20px;
-            ul {
-              list-style: none;
-            }
-          }
-          .general-info {
-            ul {
-              list-style: none;
-              li {
-                margin-bottom: 10px;
-                font-weight: 500;
-                text-transform: capitalize;
-                span {
-                  font-weight: 300;
-                }
-              }
-            }
-          }
         }
       }
     }
