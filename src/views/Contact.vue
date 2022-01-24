@@ -27,11 +27,11 @@
         <div class="contact-info">
           <div class="contact-info__item">
             <h3>Email</h3>
-            <p>exempla@email.com</p>
+            <p>sd.rolandi@gmail.com</p>
           </div>
           <div class="contact-info__item">
             <h3>Phone</h3>
-            <p>+55 (xx) - *****-*****</p>
+            <p>+55 (21) - 97362-9318</p>
           </div>
         </div>
       </div>
