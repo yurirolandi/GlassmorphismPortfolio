@@ -2,11 +2,14 @@
   <div class="home-section">
     <ContainerSection>
       <div class="home-text">
-        <p>Hello, I'm</p>
-        <h1>Yuri Rolandi</h1>
-        <h2>Frontend developer</h2>
-        <Btn @click.stop="$router.push('/about')" text="More about me" />
-        <Btn @click.stop="$router.push('/portfolio')" text="portfolio" />
+        <p>{{ idioma.br.home.p }}</p>
+        <h1>{{ idioma.br.home.h1 }}</h1>
+        <h2>{{ idioma.br.home.h2 }}</h2>
+        <Btn @click.stop="$router.push('/about')" :text="idioma.br.home.btn" />
+        <Btn
+          @click.stop="$router.push('/portfolio')"
+          :text="idioma.br.home.btn2"
+        />
       </div>
       <div class="home-img">
         <div class="home-box">
@@ -19,6 +22,7 @@
 
 <script>
 // @ is an alias to /src
+import { mapState } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 export default {
@@ -26,6 +30,11 @@ export default {
   components: {
     ContainerSection,
     Btn,
+  },
+  computed: {
+    ...mapState({
+      idioma: (state) => state,
+    }),
   },
 };
 </script>
