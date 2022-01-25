@@ -36,7 +36,7 @@
             id="education"
             v-show="education"
           >
-            <TimeLine :timeLineItems="timeLineItems[0].education" />
+            <TimeLine :timeLineItems="idioma.about.timeLine[0].education" />
           </div>
         </transition>
         <transition name="fade">
@@ -46,7 +46,7 @@
             id="experience"
             v-show="experience"
           >
-            <TimeLine :timeLineItems="timeLineItems[1].experience" />
+            <TimeLine :timeLineItems="idioma.about.timeLine[1].experience" />
           </div>
         </transition>
         <Btn text="download cv" />
@@ -84,30 +84,6 @@ export default {
         "Typescript",
         "Vuetify",
         "Node js",
-      ],
-      timeLineItems: [
-        {
-          education: [
-            {
-              line_date: "2021 - 2018",
-              line_title: "Bacharel de tecnologia - <span>Estácio de sá",
-              line_subtitle: "Estácio de sá",
-              line_text:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio libero dolores eveniet ducimus qui sequi, veritatis tempore nisi blanditiis quos, iste enim sunt. Voluptatem, recusandae saepe! Perferendis fugiat ipsum vel!",
-            },
-          ],
-        },
-        {
-          experience: [
-            {
-              line_date: "2021 - 2018",
-              line_title: "MEDGRUPO",
-              line_subtitle: "Estácio de sá",
-              line_text:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio libero dolores eveniet ducimus qui sequi, veritatis tempore nisi blanditiis quos, iste enim sunt. Voluptatem, recusandae saepe! Perferendis fugiat ipsum vel!",
-            },
-          ],
-        },
       ],
     };
   },
