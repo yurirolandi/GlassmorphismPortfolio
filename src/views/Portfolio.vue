@@ -3,7 +3,7 @@
     <ContainerSection>
       <div class="container">
         <div class="row">
-          <h1 class="portfolio-title">{{ idioma.br.portfolio.title }}</h1>
+          <h1 class="portfolio-title">{{ idioma.portfolio.title }}</h1>
         </div>
         <div class="row">
           <div
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 import PopUp from "@/components/PopUp.vue";
@@ -100,7 +100,7 @@ export default {
             },
             {
               item: "View Online",
-              stack: "www.domain.com.br",
+              stack: "www.domain.com",
             },
           ],
         },
@@ -129,7 +129,7 @@ export default {
             },
             {
               item: "View Online",
-              stack: "www.domain.com.br",
+              stack: "www.domain.com",
             },
           ],
         },
@@ -158,7 +158,7 @@ export default {
             },
             {
               item: "View Online",
-              stack: "www.domain.com.br",
+              stack: "www.domain.com",
             },
           ],
         },
@@ -187,7 +187,7 @@ export default {
             },
             {
               item: "View Online",
-              stack: "www.domain.com.br",
+              stack: "www.domain.com",
             },
           ],
         },
@@ -216,7 +216,7 @@ export default {
             },
             {
               item: "View Online",
-              stack: "www.domain.com.br",
+              stack: "www.domain.com",
             },
           ],
         },
@@ -245,7 +245,7 @@ export default {
             },
             {
               item: "View Online",
-              stack: "www.domain.com.br",
+              stack: "www.domain.com",
             },
           ],
         },
@@ -253,8 +253,8 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      idioma: (state) => state,
+    ...mapGetters({
+      idioma: "getLanguageSelected",
     }),
   },
   methods: {

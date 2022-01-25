@@ -5,25 +5,6 @@
         <h1 class="contact-title">Contact Me</h1>
       </div>
       <div class="row">
-        <div class="contact-form">
-          <form>
-            <div class="input-group">
-              <input type="text" class="input-control" placeholder="Name" />
-            </div>
-            <div class="input-group">
-              <input type="text" class="input-control" placeholder="Email" />
-            </div>
-            <div class="input-group">
-              <input type="text" class="input-control" placeholder="Subject" />
-            </div>
-            <div class="input-group">
-              <textarea placeholder="Message" class="input-control"></textarea>
-            </div>
-            <div class="submit">
-              <Btn text="Send Message" />
-            </div>
-          </form>
-        </div>
         <div class="contact-info">
           <div class="contact-info__item">
             <h3>Email</h3>
@@ -34,12 +15,51 @@
             <p>+55 (21) - 97362-9318</p>
           </div>
         </div>
+        <div class="contact-form">
+          <form @submit.prevent="send">
+            <div class="input-group">
+              <input
+                type="text"
+                v-model="Name"
+                class="input-control"
+                placeholder="Name"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                v-model="Email"
+                class="input-control"
+                placeholder="Email"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                v-model="Subject"
+                class="input-control"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                placeholder="Message"
+                v-model="Message"
+                class="input-control"
+              ></textarea>
+            </div>
+            <div class="submit">
+              <Btn text="Send Message" />
+            </div>
+          </form>
+        </div>
       </div>
     </ContainerSection>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 export default {
@@ -47,6 +67,26 @@ export default {
   components: {
     ContainerSection,
     Btn,
+  },
+  data() {
+    return {
+      Name: "",
+      Email: "",
+      Subject: "",
+      Message: "",
+    };
+  },
+  methods: {
+    send() {
+      let info = {
+        nome: this.Name,
+        email: this.Email,
+        subject: this.Subject,
+        message: this.Message,
+      };
+      axios.post("http://localhost:3000/send", info);
+      console.log(info);
+    },
   },
 };
 </script>
@@ -59,6 +99,7 @@ export default {
       display: flex;
       width: 100%;
       flex-wrap: wrap;
+      justify-content: center;
       .contact-title {
         width: 100%;
         text-align: center;
@@ -68,6 +109,7 @@ export default {
       .contact-info {
         width: 50%;
         padding: 0 15px;
+        min-width: 519px;
       }
       .contact-form {
         .input-group {

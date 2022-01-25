@@ -2,6 +2,17 @@
   <div class="header">
     <div class="container">
       <div class="row">
+        <div class="switch">
+          <input
+            id="language-toggle"
+            class="check-toggle check-toggle-round-flat"
+            type="checkbox"
+            v-model="language"
+          />
+          <label for="language-toggle"></label>
+          <span class="on">EN</span>
+          <span class="off">BR</span>
+        </div>
         <button class="nav-toggle" @click.stop="this.show = !this.show">
           <span></span>
         </button>
@@ -48,16 +59,24 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "NavBar",
   data() {
     return {
       show: false,
+      language: false,
     };
   },
   methods: {
+    ...mapActions(["LanguageSelected"]),
     closeModal() {
       this.show = false;
+    },
+  },
+  watch: {
+    language: function () {
+      this.LanguageSelected(this.language);
     },
   },
 };
@@ -76,7 +95,8 @@ export default {
   .container {
     .row {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
       .nav-toggle {
         width: 50px;
         height: 50px;
@@ -175,6 +195,99 @@ export default {
       .fade-enter,
       .fade-leave-to {
         opacity: 0;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        > span {
+          position: absolute;
+          top: 10px;
+          pointer-events: none;
+          font-family: inherit;
+          font-weight: bold;
+          font-size: 12px;
+          text-transform: uppercase;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+          width: 50%;
+          text-align: center;
+        }
+        input.check-toggle-round-flat:checked ~ .off {
+          color: $primary;
+        }
+        input.check-toggle-round-flat:checked ~ .on {
+          color: #fff;
+        }
+        > span.on {
+          left: 0;
+          padding-left: 2px;
+          color: $primary;
+        }
+        > span.off {
+          right: 0;
+          padding-right: 4px;
+          color: #fff;
+        }
+        .check-toggle {
+          position: absolute;
+          margin-left: -9999px;
+          visibility: hidden;
+          + label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+        }
+        input.check-toggle-round-flat + label {
+          padding: 2px;
+          width: 97px;
+          height: 35px;
+          background-color: $primary;
+          -webkit-border-radius: 60px;
+          -moz-border-radius: 60px;
+          -ms-border-radius: 60px;
+          -o-border-radius: 60px;
+          border-radius: 60px;
+        }
+        input.check-toggle-round-flat + label:before,
+        input.check-toggle-round-flat + label:after {
+          display: block;
+          position: absolute;
+          content: "";
+        }
+        input.check-toggle-round-flat + label:before {
+          top: 2px;
+          left: 2px;
+          bottom: 2px;
+          right: 2px;
+          background-color: $primary;
+          border-radius: 60px;
+        }
+        input.check-toggle-round-flat + label:after {
+          top: 4px;
+          left: 4px;
+          bottom: 4px;
+          width: 48px;
+          background-color: #fff;
+          -webkit-border-radius: 52px;
+          -moz-border-radius: 52px;
+          -ms-border-radius: 52px;
+          -o-border-radius: 52px;
+          border-radius: 52px;
+          -webkit-transition: margin 0.2s;
+          -moz-transition: margin 0.2s;
+          -o-transition: margin 0.2s;
+          transition: margin 0.2s;
+        }
+        input.check-toggle-round-flat:checked + label:after {
+          margin-left: 44px;
+        }
       }
     }
   }

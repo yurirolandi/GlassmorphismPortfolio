@@ -1,7 +1,7 @@
 <template>
   <div class="about-section">
     <ContainerSection>
-      <h1 class="about-title">{{ idioma.br.about.title }}</h1>
+      <h1 class="about-title">{{ idioma.about.title }}</h1>
       <div class="about-img">
         <div class="about-box">
           <img src="../assets/perfil-sem-fundo.png" alt="Yuri Rolandi" />
@@ -9,9 +9,9 @@
       </div>
       <div class="about-text">
         <p>
-          {{ idioma.br.about.text }}
+          {{ idioma.about.text }}
         </p>
-        <h3>{{ idioma.br.about.skills }}</h3>
+        <h3>{{ idioma.about.skills }}</h3>
         <Skills :skillItems="skillItems" />
         <div class="about-tabs">
           <button
@@ -19,14 +19,14 @@
             :class="education ? 'active' : ''"
             @click.stop="tab('education')"
           >
-            {{ idioma.br.about.tab_education }}
+            {{ idioma.about.tab_education }}
           </button>
           <button
             class="about-tabs__item"
             :class="experience ? 'active' : ''"
             @click.stop="tab('experience')"
           >
-            {{ idioma.br.about.tab_experience }}
+            {{ idioma.about.tab_experience }}
           </button>
         </div>
         <transition name="fade">
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 import Skills from "@/components/Skills.vue";
@@ -123,8 +123,8 @@ export default {
     },
   },
   computed: {
-    ...mapState({
-      idioma: (state) => state,
+    ...mapGetters({
+      idioma: "getLanguageSelected",
     }),
   },
 };

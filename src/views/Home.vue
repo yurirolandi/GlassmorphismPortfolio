@@ -2,13 +2,13 @@
   <div class="home-section">
     <ContainerSection>
       <div class="home-text">
-        <p>{{ idioma.br.home.p }}</p>
-        <h1>{{ idioma.br.home.h1 }}</h1>
-        <h2>{{ idioma.br.home.h2 }}</h2>
-        <Btn @click.stop="$router.push('/about')" :text="idioma.br.home.btn" />
+        <p>{{ idioma.home.p }}</p>
+        <h1>{{ idioma.home.h1 }}</h1>
+        <h2>{{ idioma.home.h2 }}</h2>
+        <Btn @click.stop="$router.push('/about')" :text="idioma.home.btn" />
         <Btn
           @click.stop="$router.push('/portfolio')"
-          :text="idioma.br.home.btn2"
+          :text="idioma.home.btn2"
         />
       </div>
       <div class="home-img">
@@ -22,7 +22,7 @@
 
 <script>
 // @ is an alias to /src
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 export default {
@@ -32,8 +32,8 @@ export default {
     Btn,
   },
   computed: {
-    ...mapState({
-      idioma: (state) => state,
+    ...mapGetters({
+      idioma: "getLanguageSelected",
     }),
   },
 };
