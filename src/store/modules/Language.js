@@ -157,22 +157,96 @@ export default {
           {
             education: [
               {
-                line_date: "2021 - 2018",
-                line_title: "Bacharel de tecnologia - <span>Estácio de sá",
-                line_subtitle: "Estácio de sá",
+                line_date: "2022 - Atualmente",
+                line_title: "Noje.Js - Udemy",
+                line_subtitle: "Rodrigo Manguinos",
+                line_text: "Treinamento de NodeJs com Typescript e TDD.",
+              },
+              {
+                line_date: "2021 - 2021",
+                line_title: "React.Js - DevPleno",
+                line_subtitle: "DevPleno",
                 line_text:
-                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio libero dolores eveniet ducimus qui sequi, veritatis tempore nisi blanditiis quos, iste enim sunt. Voluptatem, recusandae saepe! Perferendis fugiat ipsum vel!",
+                  "Treinamento avançado sobre React.js abordando todos as mudanças que ocorreu no framework.",
+              },
+              {
+                line_date: "2021 - 2021",
+                line_title: "VueJs Testes Unitarios - ALURA",
+                line_subtitle: "ALURA",
+                line_text:
+                  "Implementação de testes unitarios no vuejs usando jest",
+              },
+              {
+                line_date: "2020 - 2020",
+                line_title: "React Redux - COD3R",
+                line_subtitle: "COD3R",
+                line_text:
+                  "Curso do framework React & Redux, com 42.5 horas de treinamento",
+              },
+              {
+                line_date: "2020 - 2020",
+                line_title:
+                  "Scrum foundation Professional Certificate - Certiprof",
+                line_subtitle: "Certiprof",
+                line_text: "certificado de agilidade",
+              },
+              {
+                line_date: "2020 - 2020",
+                line_title: "Javascript Moderno - Alura",
+                line_subtitle: "Alura",
+                line_text: "Curso Javascript moderno",
+              },
+              {
+                line_date: "2020 - 2020",
+                line_title: "Web Moderno - Udemy",
+                line_subtitle: "COD3R",
+                line_text:
+                  "Curso Web Moderno utilizando as mais novas tecnologias do mercado, contanto com mais de 75 horas de treinamento.",
+              },
+              {
+                line_date: "2019 - 2019",
+                line_title: "Vue.JS - Udemy",
+                line_subtitle: "COD3R",
+                line_text:
+                  "Curso do framework Vuejs, com 42.5 horas de treinamento ",
+              },
+              {
+                line_date: "2017 - 2021",
+                line_title:
+                  "Tecnologo - Analise e desenvolvimento de sistemas - Estácio de sá",
+                line_subtitle: "Estácio de sá",
+                line_text: "Graduação em sistemas de informação",
               },
             ],
           },
           {
             experience: [
               {
-                line_date: "2021 - 2018",
-                line_title: "Bacharel de tecnologia - <span>Estácio de sá",
-                line_subtitle: "Estácio de sá",
+                line_date: "2021 - 2022",
+                line_title: "Frontend Pleno - STORM GROUP",
+                line_subtitle: "Frontend",
+                line_text: "Atuando como front utilizando Vue.js",
+              },
+              {
+                line_date: "2020 - 2021",
+                line_title: "Frontend - MEDGRUPO",
+                line_subtitle: "Frontend",
                 line_text:
-                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio libero dolores eveniet ducimus qui sequi, veritatis tempore nisi blanditiis quos, iste enim sunt. Voluptatem, recusandae saepe! Perferendis fugiat ipsum vel!",
+                  "Atuando como front utilizando Vue.js, Node.Js e Angular",
+              },
+              {
+                line_date: "2019 - 2020",
+                line_title: "Frontend - MEDGRUPO",
+                line_subtitle: "Frontend",
+                line_text:
+                  "Atuando como front utilizando html,css e javascript",
+              },
+              {
+                line_date: "2018 - 2019",
+                line_title: "Estagiario - MEDGRUPO",
+                line_subtitle: "Frontend",
+                line_text:
+                  "Atuando como front utilizando html,css e javascript",
               },
             ],
           },
