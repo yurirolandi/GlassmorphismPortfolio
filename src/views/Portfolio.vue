@@ -8,7 +8,7 @@
         <div class="row">
           <div
             class="portfolio-item"
-            v-for="(portfolio, i) in portfolioItems"
+            v-for="(portfolio, i) in idioma.portfolio.portfolioItems"
             :key="i"
           >
             <div class="portfolio-item__thumbnail">
@@ -54,12 +54,7 @@ import { mapGetters } from "vuex";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
 import PopUp from "@/components/PopUp.vue";
-import image1 from "../../guia/img/portfolio/1.jpg";
-import image2 from "../../guia/img/portfolio/2.jpg";
-import image3 from "../../guia/img/portfolio/3.jpg";
-import image4 from "../../guia/img/portfolio/4.jpg";
-import image5 from "../../guia/img/portfolio/5.jpg";
-import image6 from "../../guia/img/portfolio/6.jpg";
+
 export default {
   name: "Portfolio",
   components: {
@@ -74,182 +69,6 @@ export default {
       imgTitle: "",
       descriptionText: "",
       descriptionInfo: [],
-      portfolioItems: [
-        {
-          url: image1,
-          alt: "portfolio item thumb",
-          title: "education course website",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
-          btnText: "View project",
-          item_course: [
-            {
-              item: "created",
-              stack: "4 dec 2020",
-            },
-            {
-              item: "technologies used",
-              stack: "Html, css",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "View Online",
-              stack: "www.domain.com",
-            },
-          ],
-        },
-        {
-          url: image2,
-          alt: "portfolio item thumb",
-          title: "education course website",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
-          btnText: "View project",
-          item_course: [
-            {
-              item: "created",
-              stack: "4 dec 2020",
-            },
-            {
-              item: "technologies used",
-              stack: "Html, css",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "View Online",
-              stack: "www.domain.com",
-            },
-          ],
-        },
-        {
-          url: image3,
-          alt: "portfolio item thumb",
-          title: "education course website",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
-          btnText: "View project",
-          item_course: [
-            {
-              item: "created",
-              stack: "4 dec 2020",
-            },
-            {
-              item: "technologies used",
-              stack: "Html, css",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "View Online",
-              stack: "www.domain.com",
-            },
-          ],
-        },
-        {
-          url: image4,
-          alt: "portfolio item thumb",
-          title: "education course website",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
-          btnText: "View project",
-          item_course: [
-            {
-              item: "created",
-              stack: "4 dec 2020",
-            },
-            {
-              item: "technologies used",
-              stack: "Html, css",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "View Online",
-              stack: "www.domain.com",
-            },
-          ],
-        },
-        {
-          url: image5,
-          alt: "portfolio item thumb",
-          title: "education course website",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
-          btnText: "View project",
-          item_course: [
-            {
-              item: "created",
-              stack: "4 dec 2020",
-            },
-            {
-              item: "technologies used",
-              stack: "Html, css",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "View Online",
-              stack: "www.domain.com",
-            },
-          ],
-        },
-        {
-          url: image6,
-          alt: "portfolio item thumb",
-          title: "education course website",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
-          btnText: "View project",
-          item_course: [
-            {
-              item: "created",
-              stack: "4 dec 2020",
-            },
-            {
-              item: "technologies used",
-              stack: "Html, css",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "Role",
-              stack: "Frontend",
-            },
-            {
-              item: "View Online",
-              stack: "www.domain.com",
-            },
-          ],
-        },
-      ],
     };
   },
   computed: {
