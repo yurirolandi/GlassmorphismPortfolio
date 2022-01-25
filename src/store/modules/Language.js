@@ -1,3 +1,10 @@
+import image1 from "../../../guia/img/portfolio/1.jpg";
+import image2 from "../../../guia/img/portfolio/2.jpg";
+import image3 from "../../../guia/img/portfolio/3.jpg";
+import image4 from "../../../guia/img/portfolio/4.jpg";
+import image5 from "../../../guia/img/portfolio/5.jpg";
+import image6 from "../../../guia/img/portfolio/6.jpg";
+
 export default {
   state: {
     br: {
@@ -117,22 +124,182 @@ export default {
         title: "Trabalhos Recentes",
         item_course_title: "Nanny Share",
         item_course_text: "Desafio front end com teste A/B",
-        item_course_date: {
-          item: "criado",
-          date: "Junho 2021",
-        },
-        item_course_tec: {
-          item: "tecnologia Usada",
-          stack: "React Js, Scss e Test A/B",
-        },
-        item_course_role: {
-          item: "Role",
-          stack: "Frontend",
-        },
-        item_course_view: {
-          item: "View Online",
-          stack: "www.domain.com.br",
-        },
+        portfolioItems: [
+          {
+            url: image1,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "Ver Projeto",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image2,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "Ver Projeto",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image3,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "Ver Projeto",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image4,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "Ver Projeto",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image5,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "Ver Projeto",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image6,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "Ver Projeto",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+        ],
       },
       contact: {
         title: "Entre em contato",
@@ -257,22 +424,182 @@ export default {
         item_course_title: "education course website",
         item_course_text:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio libero dolores eveniet ducimus qui sequi, veritatis tempore nisi blanditiis quos, iste enim sunt. Voluptatem, recusandae saepe! Perferendis fugiat ipsum vel!",
-        item_course_date: {
-          item: "created",
-          date: "4 dec 2020",
-        },
-        item_course_tec: {
-          item: "technologies used",
-          stack: "Html, css",
-        },
-        item_course_role: {
-          item: "Role",
-          stack: "Frontend",
-        },
-        item_course_view: {
-          item: "View Online",
-          stack: "www.domain.com.br",
-        },
+        portfolioItems: [
+          {
+            url: image1,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "View project",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image2,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "View project",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image3,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "View project",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image4,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "View project",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image5,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "View project",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+          {
+            url: image6,
+            alt: "portfolio item thumb",
+            title: "education course website",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt veniam voluptate repellat tempora rerum",
+            btnText: "View project",
+            item_course: [
+              {
+                item: "created",
+                stack: "4 dec 2020",
+              },
+              {
+                item: "technologies used",
+                stack: "Html, css",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "Role",
+                stack: "Frontend",
+              },
+              {
+                item: "View Online",
+                stack: "www.domain.com",
+              },
+            ],
+          },
+        ],
       },
       contact: {
         title: "Contact Me",
