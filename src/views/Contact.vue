@@ -32,6 +32,7 @@
                 class="input-control"
                 placeholder="Email"
               />
+              <span v-if="validEmail" class="errorEmail">{{ validEmail }}</span>
             </div>
             <div class="input-group">
               <input
@@ -75,18 +76,36 @@ export default {
       Email: "",
       Subject: "",
       Message: "",
+      validEmail: "",
     };
   },
   methods: {
     send() {
-      let info = {
-        nome: this.Name,
-        email: this.Email,
-        subject: this.Subject,
-        message: this.Message,
-      };
-      axios.post("http://localhost:3000/send", info);
-      console.log(info);
+      if (!this.Email.includes("@")) {
+        this.validEmail = "Insira um email válido";
+        return;
+      }
+      if (
+        this.Name !== "" &&
+        this.Email !== "" &&
+        this.Subject !== "" &&
+        this.Message !== ""
+      ) {
+        let info = {
+          nome: this.Name,
+          email: this.Email,
+          subject: this.Subject,
+          mensagem: this.Message,
+        };
+        axios.post("https://sendemail-yuri.herokuapp.com/send", info);
+
+        this.Name = "";
+        this.Email = "";
+        this.Subject = "";
+        this.Message = "";
+      } else {
+        console.log("Ops.. ocorreu um erro ao enviar!");
+      }
     },
   },
   computed: {
@@ -121,6 +140,11 @@ export default {
         .input-group {
           width: 100%;
           margin-bottom: 30px;
+          .errorEmail {
+            color: $primary;
+            font-size: 13px;
+            margin: 15px 10px;
+          }
           .input-control {
             display: block;
             width: 100%;
