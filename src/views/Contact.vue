@@ -2,7 +2,7 @@
   <div class="contact-section">
     <ContainerSection>
       <div class="row">
-        <h1 class="contact-title">Contact Me</h1>
+        <h1 class="contact-title">{{ idioma.contact.title }}</h1>
       </div>
       <div class="row">
         <div class="contact-info">
@@ -22,7 +22,7 @@
                 type="text"
                 v-model="Name"
                 class="input-control"
-                placeholder="Name"
+                :placeholder="idioma.contact.name"
               />
             </div>
             <div class="input-group">
@@ -38,18 +38,18 @@
                 type="text"
                 v-model="Subject"
                 class="input-control"
-                placeholder="Subject"
+                :placeholder="idioma.contact.subject"
               />
             </div>
             <div class="input-group">
               <textarea
-                placeholder="Message"
+                :placeholder="idioma.contact.message"
                 v-model="Message"
                 class="input-control"
               ></textarea>
             </div>
             <div class="submit">
-              <Btn text="Send Message" />
+              <Btn :text="idioma.contact.btnText" />
             </div>
           </form>
         </div>
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import axios from "axios";
 import ContainerSection from "@/components/ContainerSection.vue";
 import Btn from "@/components/Button.vue";
@@ -87,6 +88,11 @@ export default {
       axios.post("http://localhost:3000/send", info);
       console.log(info);
     },
+  },
+  computed: {
+    ...mapGetters({
+      idioma: "getLanguageSelected",
+    }),
   },
 };
 </script>

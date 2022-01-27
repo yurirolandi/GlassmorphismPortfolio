@@ -304,6 +304,10 @@ export default {
       contact: {
         title: "Entre em contato",
         Phone: "Telefone",
+        name: "Nome",
+        subject: "Assunto",
+        message: "Mensagem",
+        btnText: "Enviar",
       },
     },
     en: {
@@ -604,6 +608,10 @@ export default {
       contact: {
         title: "Contact Me",
         Phone: "Phone",
+        name: "Name",
+        subject: "Subject",
+        message: "Message",
+        btnText: "Send Message",
       },
     },
     language: false,
